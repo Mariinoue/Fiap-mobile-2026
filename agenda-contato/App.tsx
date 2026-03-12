@@ -1,0 +1,53 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, TextInput, Switch, Button, Alert, ToastAndroid } from 'react-native';
+
+
+export default function App() {
+  return (
+    // <View style={styles.container}>
+    //   <Text>Digite seu nome: </Text>
+    //   <TextInput style={{ height: 40, borderColor: 'purple', borderWidth: 1 }}
+    //   placeholder='Nome completo'
+    //   keyboardType='ascii-capable'
+    //   numberOfLines={4}
+    //   multiline={true}
+    //   />
+
+    //   <Text>Contratado</Text>
+    //   <Switch value={true} thumbColor="red"
+    //   trackColor={{false: 'gray', true: 'green'}}
+    //   />
+    //   <Button title='Salvar' onPress={() =>alert('Contato salvo com sucesso!')} />
+    //   <StatusBar style="auto" />
+    // </View>
+
+
+    <View style={styles.container}>
+      <Text>Digite seu nome:</Text>
+      <TextInput style={{ backgroundColor: "lightblue", borderColor: "purple", borderWidth: 1 }} placeholder="Nome Completo: "
+        keyboardType="ascii-capable" numberOfLines={4} multiline={true} />
+      <Text>Contratado: </Text>
+      <Switch value={false} thumbColor="red" trackColor={{ false: "lightpink", true: "pink" }} />
+      {/* <Image source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUUZCJSRnvEx40Xwhr5_hUTDaXICvIhVfpg&s"}} width={200} height={300}/>
+      <Image source={dog} width={200} height={300}/>  */}
+      <Button title="Lançar Alerta" onPress={() => {
+        Alert.alert("Informação", "Nome preenchido", [{ text: "Ok" }]);
+      }} />
+      <Button title="Lançar Toast Android"
+        onPress={() => {
+          ToastAndroid.show("Digite o nome completo",
+            ToastAndroid.LONG)
+        }}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+  },
+});
