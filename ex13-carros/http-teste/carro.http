@@ -1,0 +1,44 @@
+###
+POST https://revenda-carro-default-rtdb.firebaseio.com/carros.json HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "modelo": "Honda Civic",
+    "placa": "ABC-1234",
+    "ano": 2020
+}
+
+###
+POST https://revenda-carro-default-rtdb.firebaseio.com/carros.json HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "modelo": "Toyota Corolla",
+    "placa": "XYZ-9876",
+    "ano": 2022
+}
+
+###
+GET https://revenda-carro-default-rtdb.firebaseio.com/carros.json HTTP/1.1
+
+
+###
+PUT https://revenda-carro-default-rtdb.firebaseio.com/carros/-OrAyi2CbJlDUSN74Njl.json HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "modelo": "Fusca",
+    "placa": "FUS-1970",
+    "ano": 1970
+}
+
+###
+PATCH https://revenda-carro-default-rtdb.firebaseio.com/carros/-OrAyi2CbJlDUSN74Njl.json HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "ano": 1972
+}
+
+###
+DELETE https://revenda-carro-default-rtdb.firebaseio.com/carros/-OrAyi2CbJlDUSN74Njl.json HTTP/1.1
