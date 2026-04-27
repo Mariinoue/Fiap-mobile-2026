@@ -1,4 +1,3 @@
-// Retiramos o .json daqui
 const URL_BASE = "https://revenda-carro-default-rtdb.firebaseio.com/carros";
 
 export const buscarTodos = (): Promise<Response> => {

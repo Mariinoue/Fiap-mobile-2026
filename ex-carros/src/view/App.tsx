@@ -57,14 +57,12 @@ export default function App() {
     <View style={estilos.main}>
       <StatusBar hidden={false} style='auto' animated={true} />
 
-      {/* Top Bar conforme a Aula 14 */}
       <View style={[estilos.topBar, { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 15 }]}>
         <Text style={[estilos.body, { fontSize: 28, fontWeight: 'bold' }]}>Garagem de Carros</Text>
         <Icons name={screenModeIcon} size={32} color={estilos.body.color} onPress={toggleScreenMode} />
       </View>
 
       <View style={estilos.container}>
-        {/* Usando o CustomTextInput conforme solicitado */}
         <CustomTextInput
           style={estilos.input}
           placeholder="Modelo"
